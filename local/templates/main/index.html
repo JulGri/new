@@ -1,482 +1,216 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
-<head profile="http://gmpg.org/xfn/11">
-	<title>Novux</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Novux" />
-	<meta name="description" content="Novux" />
-	<meta name="author" content="Bogdan Rosu - http://www.spinform.ro" />
-	<meta name="copyright" content="&copy; 2010 Bogdan Rosu. All rights reserved." />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Leather Shop - Free Template</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!--
+Template 2053 Leather Shop
+http://www.tooplate.com/view/2053-leather-shop
+-->
+<link href="css/tooplate_style.css" rel="stylesheet" type="text/css" />
 
-    <!-- Load Jquery -->
-    <script src="_include/js/jquery.js" type="text/javascript"></script>
-    <!-- End Load -->
+<script language="javascript" type="text/javascript">
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+</script>
 
-    <!-- for IE6 i'm sorry but there is too much wrong with it, needs warning at least, you can disable it by delething this load. -->
-    <script src="_include/js/jquery.badBrowser.js" type="text/javascript" charset="utf-8"></script>
-    <!-- End Load -->
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
 
-    <!-- ALL jQuery Tools. No jQuery library -->
-    <script src="_include/js/jquery.tools.js" type="text/javascript"></script>
-    <!-- End Load -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/ddsmoothmenu.js">
 
-    <!-- Load Jquery Easing -->
-    <script src="_include/js/jquery.easing.js" type="text/javascript"></script>
-    <script src="_include/js/jquery.css-transform.js" type="text/javascript"></script>
-    <script src="_include/js/jquery.css-rotate-scale.js" type="text/javascript"></script>
-    <!-- End Load -->
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
 
-    <!-- Load Jquery Cycle and adiacent CSS File -->
-    <script src="_include/js/jquery.cycle.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="_include/css/jquery.cycle.css" type="text/css" media="screen" />
-    <!-- End Load -->
+</script>
 
-    <!-- Load Cufon and Adiacent Font Files, and apply Cufon on used Styles -->
-    <script src="_include/js/cufon.js" type="text/javascript"></script>
-    <script src="_include/js/Museo_400-Museo_italic_400.font.js" type="text/javascript"></script>
-    <!-- End Load -->
+<script type="text/javascript">
 
-    <!-- Load Pretty Photo -->
-    <link rel="stylesheet" href="_include/css/prettyPhoto.css" type="text/css" media="screen" />
-    <script src="_include/js/jquery.prettyPhoto.js" type="text/javascript"></script>
-    <script type="text/javascript">
-       /* pretty photo responds on rel='prettyPhoto' */
-       jQuery(document).ready(function() { $("a[rel^='prettyPhoto']").prettyPhoto();   });
-    </script>
-    <!-- End Load -->
+ddsmoothmenu.init({
+	mainmenuid: "tooplate_menu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
 
-    <!-- Load Superfish Drowpdown Menu, and run it -->
-    <script src="_include/js/jquery.hoverInt.js" type="text/javascript" charset="utf-8"></script>
-    <script src="_include/js/jquery.bgiframe.js" type="text/javascript" charset="utf-8"></script>
-    <script src="_include/js/superfish.js" type="text/javascript" charset="utf-8"></script>
-    <!-- End Load -->
+</script>
 
-    <!-- Load Jquery Roundabout, and adiacent JS & CSS file -->
-    <script src="_include/js/jquery.roundabout.js" type="text/javascript"></script>
-    <script src="_include/js/jquery.roundabout-shapes-1.1.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="_include/css/jquery.roundabout.css" type="text/css" media="screen" />
-    <!-- End Load -->
+<script src="js/jquery-1.2.6.min.js" type="text/javascript"></script>
+<script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="js/jquery.kwicks-1.5.1.pack.js" type="text/javascript"></script>
 
-    <!-- Load SWFObject, used for video embedding -->
-    <script src="_include/js/swfobject.js" type="text/javascript" charset="utf-8"></script>
-    <!-- End Load -->
-
-    <!-- Load Quicksand -->
-    <script src="_include/js/jquery.quicksand.js" type="text/javascript" charset="utf-8"></script>
-    <!-- End Load -->
-
-    <!-- Load some small custom scripts -->
-    <script src="_include/js/custom.js" type="text/javascript"></script>
-    <!-- End Load -->
-
-    <!-- Load PNG Fix older IE Versions -->
-    <!--[if lt IE 7]>
-        <script type="text/javascript" src="_include/js/pngfix.js"></script>
-        <script type="text/javascript">DD_belatedPNG.fix('*');</script>
-    <![endif]-->
-    <!-- End Load -->
-
-    <!-- Load Main Stylesheet -->
-    <link rel="stylesheet" href="_include/css/style.css" type="text/css" media="screen" />
-    <!-- End Load -->
-
-    <!-- Load Alternate Stylesheets, can be disabled if not used -->
-    <link rel="alternate stylesheet" type="text/css" media="screen" title="orange" href="_include/css/style-orange.css" />
-    <link rel="alternate stylesheet" type="text/css" media="screen" title="dirtyblue" href="_include/css/style-dirtyblue.css" />
-    <link rel="alternate stylesheet" type="text/css" media="screen" title="redish" href="_include/css/style-redish.css" />
-    <link rel="alternate stylesheet" type="text/css" media="screen" title="green" href="_include/css/style-green.css" />
-    <link rel="alternate stylesheet" type="text/css" media="screen" title="pink" href="_include/css/style-pink.css" />
-    <script src="_include/js/styleswitch.js" type="text/javascript" charset="utf-8"></script>
-    <!-- End Load -->
-
-    <!-- Load Main Enhancements Stylesheet border radius, transparency and such things -->
-    <link rel="stylesheet" href="_include/css/style-enhance.css" type="text/css" media="screen" />
-    <!-- End Load -->
-
-    <!-- Load IE Stylesheet -->
-    <!--[if IE]>
-    <link rel="stylesheet" href="_include/css/ie.css" type="text/css" media="screen" />
-    <![endif]-->
-    <!-- End Load -->
-
-    <!-- Load IE6 Stylesheet -->
-    <!--[if IE 6]>
-    <link rel="stylesheet" href="_include/css/ie6.css" type="text/css" media="screen" />
-    <![endif]-->
-    <!-- End Load -->
+<script type="text/javascript">
+	$().ready(function() {
+		$('.slider').kwicks({
+			max : 740,
+			spacing : 1
+		});
+	});
+</script>
 
 </head>
 <body>
 
-<!-- start top and main menu -->
-<div class="main-menu">
-<div class="ornament">
-    <div class="containit">
-        <div class="logo"><a href="index.html"><img src="_include/images/logo.png" alt="Novux" /></a></div>
-        <div class="menu">
-		    <!-- navigation start -->
-			<div id="navigation">
+<div id="tooplate_top_wrapper">
+	<div id="tooplate_top">
+    	<div id="tooplate_menu" class="ddsmoothmenu">
+            <ul>
+                <li><a href="index.html" class="selected"><span></span>Home</a></li>
+                <li><a href="about.html"><span></span>About Us</a>
+                    <ul>
+                        <li><a href="#">Sub menu 1</a></li>
+                        <li><a href="#">Sub menu 2</a></li>
+                        <li><a href="#">Sub menu 3</a></li>					
+                    </ul>
+                </li>
+                <li><a href="portfolio.html"><span></span>Portfolio</a>
+                    <ul>
+                        <li><a href="#">Sub menu 1</a></li>
+                        <li><a href="#">Sub menu 2</a></li>
+                        <li><a href="#">Sub menu 3</a></li>
+                        <li><a href="#">Sub menu 4</a></li>
+                        <li><a href="#">Sub menu 5</a></li>   		
+                    </ul>
+              </li>
+              <li><a href="blog.html"><span></span>Blog</a></li>
+              <li><a href="contact.html"><span></span>Contact</a></li>
+            </ul>
+            <br style="clear: left" />
+        </div> <!-- end of menu -->
+    	<div id="tooplate_search">
+            <form action="#" method="get">
+              <input type="text" value="Search" name="keyword" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
+              <input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" class="sub_btn"  />
+            </form>
+        </div>
+    </div> <!-- end of top -->
+</div> <!-- end of top wrapper -->
 
-        		 <ul class="sf-menu">
-                    <li class="current"><a href="index-roundabout.html" class="applyfont">Home</a>
-                        <ul>
-                            <li><a href="index-cycle.html">Home Normal</a></li>
-                            <li><a href="index-roundabout-autoplay.html">Home Roundabout Autoplay</a></li>
-                            <li><a href="index-roundabout.html">Home Roundabout</a></li>
-                            <li><a href="index-nivo-slider.html">Home Nivo Slider</a></li>
-                            <li class="last roundbottom"><a href="index-feature-carousel.html">Home Feature Carousel</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="gallery-grid.html" class="applyfont">Gallery</a>
-                        <ul>
-                            <li><a href="gallery-grid.html">Gallery Grid Filterable</a></li>
-                            <li><a href="gallery-list.html">Gallery List</a></li>
-                            <li><a href="gallery-grid-sidebar.html">Gallery Grid Sidebar</a></li>
-                            <li><a href="blank.html">Another Page</a><ul>
-                                    <li class="roundtop"><a href="blank.html">Risus malesuada mi</a></li>
-                                    <li><a href="blank.html">Fusce tincidunt nisl nec</a></li>
-                                    <li><a href="blank.html">Curabitur plac orci mi stincidunt</a></li>
-                                    <li class="last roundbottom"><a href="blank.html">Nec lorem mattis</a></li>
-                                </ul>
-                            </li>
-                            <li class="last roundbottom"><a href="blank.html">Page With Stuff On It</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="faq.html" class="applyfont">FAQ</a></li>
-                    <li><a href="services-wide.html" class="applyfont">Services</a>
-                        <ul>
-                            <li><a href="services-sidebar.html">Services Sidebar</a></li>
-                            <li><a href="services-wide.html">Services Wide Big Icons</a></li>
-                            <li class="last roundbottom"><a href="services-wide-small.html">Services Wide Small Icons</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="blog-grid.html" class="applyfont">Blog</a>
-                        <ul>
-                            <li><a href="blog-grid.html">Blog Style Grid</a></li>
-                            <li><a href="blog-grid-noimage.html">Blog Style Grid No Image</a></li>
-                            <li><a href="blog-list.html">Blog Style List</a></li>
-                            <li class="last roundbottom"><a href="blog-list-noimage.html">Blog Style List No Image</a></li>
-                        </ul>
+<div id="tooplate_header_wrapper">
+	<div id="tooplate_header">
+    
+    	<div id="site_title"><h1><a href="#">Leather Shop Template</a></h1></div>
+        
+        <div id="slider_wrapper">
+            <ul class="slider horizontal" >
+                <li id="slide_1"><img src="images/slider/01.jpg" alt="Slider 1" /></li>
+                <li id="slide_2"><img src="images/slider/02.jpg" alt="Slider 2" /></li>
+                <li id="slide_3"><img src="images/slider/03.jpg" alt="Slider 3" /></li>
+                <li id="slide_4"><img src="images/slider/04.jpg" alt="Slider 4" /></li>
+                <li id="slide_5"><img src="images/slider/05.jpg" alt="Slider 5" /></li>
+            </ul>
+		</div>
+    </div> <!-- end of header -->
+</div> <!-- end of header wrapper -->
 
-                    </li>
-                    <li class="last"><a href="contact-half.html" class="applyfont">Contact</a>
-                        <ul>
-                            <li><a href="contact-half.html">Contact Style Halfed</a></li>
-                            <li class="last roundbottom"><a href="contact-wide.html">Contact Style Wide</a></li>
-                        </ul>
-                    </li>
+<div id="tooplate_main_wrapper">
+	<div id="tooplate_main">
+    	<div id="content_top">
+            <div class="post col_2 no_bottom float_l">
+                <h2><a href="#">Leather Shop Design</a></h2>
+                <div class="meta no_background"><strong>15 January 2048</strong> in <strong><a href="#">Freebie</a>, <a href="#">Template</a></strong> by Tracy, <strong>128 comments</strong></div>
+                
+                <div class="image_frame image_fl"><span></span><img src="images/tooplate_image_01.jpg" alt="Image 01" /></div>
+                <p>Leather Shop is a free <a href="http://www.tooplate.com" target="_parent">website template</a> for everyone. You may download, modify and apply this template for any of your website.  Credit goes to <a href="http://jwloh.deviantart.com/art/Aquaticus-Social-91014249" target="_blank">jwloh</a> for icons. Ut sed lorem ac ante cursus auctor.</p>
+                <a href="#" class="more float_r">More</a>
+                <div class="cleaner"></div>
+            </div>
+            <div class="post col_2 no_bottom float_r">
+                <h2><a href="#">Template Concept</a></h2>
+                <div class="meta no_background"><strong>2 February 2048</strong> in <strong><a href="#">Marketing</a>, <a href="#">Advertising</a></strong> by Julia, <strong>256 comments</strong></div>
+                
+                <div class="image_frame image_fl"><span></span><img src="images/tooplate_image_02.jpg" alt="Image 02" /></div>
+                <p>Ut sed lorem ac ante cursus auctor. Nam ut congue velit. Cras eget fermentum sem. Maecenas nec purus lorem, a sodales lectus. Etiam consequat nulla sit amet nisl volutpat ornare. Donec sollicitudin purus sit amet pellen tesque tincidunt. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> and <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
+                <a href="#" class="more float_r">More</a>
+                <div class="cleaner"></div>
+            </div>
+            <div class="cleaner"></div>
+        </div>
+		<div id="content">
+                
+            <div class="col_3">
+                <h3>New Services</h3>
+                <ul class="tooplate_list">
+                	<li>Augue felis pharetra felis</li>
+                    <li>Donec eget est eu velit</li>
+                    <li>Curabitur vehicula arcu at </li>
+                    <li>Felis pharetra felis sed</li>
+                    <li>Integer placerat dolor vel</li>
+                    <li>Tortor mi in massa donec</li>
+                    <li>Vestibulum bibendum urna</li>
                 </ul>
-
+            </div>
+            <div class="col_3 no_margin_right">
+                <h3>Testimonials</h3>
+                <p class="testimonial">Proin metus mi, fringilla sit amet consequat vel, vulputate leo.</p>
+                <cite>Ronald <a href="#"><span>- SEO Specialist</span></a></cite>    
+                <div class="cleaner h40"></div>
+                <p class="testimonial">Suspendisse nec orci vel justo varius dictum sed sed metus.</p>
+                <cite>Booker <a href="#"><span>- Web Designer</span></a></cite>    
 			</div>
-            <!-- navigation end -->
+            <div class="cleaner"></div>
         </div>
-        <div class="clear"></div>
-    </div>
-</div>
-</div>
+        <div id="sidebar">
+                           
+            <h3>Featured Project</h3>
+			<div class="image_frame"><span></span><img src="images/tooplate_image_09.png" alt="Image 09" /></div>
+            <em>Maecenas consequat faucibus eros, rhoncus gravida nulla rhoncus at.</em>
+        </div> <!-- end of sidebar -->
+        <div class="cleaner"></div>
+    </div> <!-- end of main -->
+</div> <!-- end of main wrapper -->
 
-<!-- end top and main menu -->
-<!-- start header alternate -->
-<div class="header-alt">
-
-                 <div class="slide slide-roundabout bg1">
-                     <div class="containit ornament-right">
-                        <div class="roundaboutshadow">
-                            <h1 class="mb4">You can have a Bigger single  Roundabout here.</h1>
-                            <p class="mb20">Amazingly this IS compatible with all modern and current Browsers.</p>
-                            <!-- roundabout images targets, prettyphoto opens on click of the middle item -->
-
-                            <script type="text/javascript" charset="utf-8">
-                              function roundaboutimage1(){  $.prettyPhoto.open('_include/images/showcase/showcase1.jpg', 'title', 'Some Brilliant Project'); }
-                              function roundaboutimage2(){  $.prettyPhoto.open('_include/images/showcase/showcase2.jpg', 'title', 'Another One'); }
-                              function roundaboutimage3(){  $.prettyPhoto.open('_include/images/showcase/showcase3.jpg', 'title', 'This is Insane'); }
-                              function roundaboutimage4(){  $.prettyPhoto.open('_include/images/showcase/showcase4.jpg', 'title', 'Another Comment'); }
-                              function roundaboutimage5(){  $.prettyPhoto.open('_include/images/showcase/showcase5.jpg', 'title', 'This roundabout Rules'); }
-                              function roundaboutimage6(){  $.prettyPhoto.open('_include/images/showcase/showcase6.jpg', 'title', 'Awsome Commment'); }
-                              function roundaboutimage7(){  $.prettyPhoto.open('_include/images/showcase/showcase7.jpg', 'title', 'And Another One'); }
-                           </script>
-                            <!-- the actual roundabout -->
-                    		<ul id="roundabout">
-                    			<li id="roundaboutimage1"><a href="javascript:roundaboutimage1();"><img src="_include/images/showcase/roundabout/showcase1.jpg" alt="" /></a></li>
-                    			<li id="roundaboutimage2"><a href="javascript:roundaboutimage2();"><img src="_include/images/showcase/roundabout/showcase2.jpg" alt="" /></a></li>
-                    			<li id="roundaboutimage3"><a href="javascript:roundaboutimage3();"><img src="_include/images/showcase/roundabout/showcase3.jpg" alt="" /></a></li>
-                    			<li id="roundaboutimage4"><a href="javascript:roundaboutimage4();"><img src="_include/images/showcase/roundabout/showcase4.jpg" alt="" /></a></li>
-                    			<li id="roundaboutimage5"><a href="javascript:roundaboutimage5();"><img src="_include/images/showcase/roundabout/showcase1.jpg" alt="" /></a></li>
-                    			<li id="roundaboutimage6"><a href="javascript:roundaboutimage6();"><img src="_include/images/showcase/roundabout/showcase2.jpg" alt="" /></a></li>
-                    			<li id="roundaboutimage7"><a href="javascript:roundaboutimage7();"><img src="_include/images/showcase/roundabout/showcase3.jpg" alt="" /></a></li>
-                        	</ul>
-                            <div id="filler"><!--  --></div>
-                        </div>
-                        <!-- start the roundabout with descriptions -->
-                        <script type="text/javascript">
-                        //<![CDATA[
-                    			var descs = {
-                    				roundaboutimage1: 'Some text about the item <a href="#">a link</a> here. ',
-                    				roundaboutimage2: 'He has the look of a wise, fierce warrior.',
-                    				roundaboutimage3: 'Attention all mice: you&rsquo;ve been warned.',
-                    				roundaboutimage4: 'Some text about the item <a href="#">a link</a> here.',
-                    				roundaboutimage5: 'Introducing: the INCREDIBLE ROUNDABOUT!',
-                    				roundaboutimage6: 'Attention all mice: you&rsquo;ve been warned.',
-                    				roundaboutimage7: 'Yes you can have Video here if you want.'
-                    			};
-                                // settings for first button, for each roundabout image one setting
-                    			var linkone = {
-                    				roundaboutimage1: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>View Details</span></a>',
-                    				roundaboutimage2: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>View Details</span></a>',
-                    				roundaboutimage3: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>View Details</span></a>',
-                    				roundaboutimage4: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>View Details</span></a>',
-                    				roundaboutimage5: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>View Details</span></a>',
-                    				roundaboutimage6: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>View Details</span></a>',
-                    				roundaboutimage7: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>View Details</span></a>'
-                    			};
-                                // settings for second button, for each roundabout image one setting
-                    			var linktwo = {
-                    				roundaboutimage1: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Purchase This Now</span></a>',
-                    				roundaboutimage2: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Get it at Themeforest</span></a>',
-                    				roundaboutimage3: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Purchase This Now</span></a>',
-                    				roundaboutimage4: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Get it at Themeforest</span></a>',
-                    				roundaboutimage5: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Do Something Now</span></a>',
-                    				roundaboutimage6: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Purchase This Now</span></a>',
-                    				roundaboutimage7: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Cufon Buttons are Sexy</span></a>'
-                    			};
-                                // what happens on focus and on blur
-                    			$('#roundabout li').focus(function() {
-                                    var useLinkone = (typeof linkone[$(this).attr('id')] != 'undefined') ? linkone[$(this).attr('id')] : '';
-                    				$('#roundaboutlinkone').html(useLinkone).fadeIn(200);
-                                    var useLinktwo = (typeof linktwo[$(this).attr('id')] != 'undefined') ? linktwo[$(this).attr('id')] : '';
-                    				$('#roundaboutlinktwo').html(useLinktwo).fadeIn(200);
-                    				var useText = (typeof descs[$(this).attr('id')] != 'undefined') ? descs[$(this).attr('id')] : '';
-                    				$('#roundaboutdescription').html(useText).fadeIn(200);
-                                    Cufon.replace('#roundaboutdescription, #roundaboutlinkone,  #roundaboutlinktwo', { hover: true, textShadow: '1px 1px 0 #ffffff', fontFamily: 'Museo' });
-                    			}).blur(function() {
-                                    $('#roundaboutlinkone').fadeOut(200);
-                                    $('#roundaboutlinktwo').fadeOut(200);
-                    				$('#roundaboutdescription').fadeOut(200);
-                    			});
-
-                    			$(document).ready(function() {
-                                    var interval;
-                    				$('#roundabout')
-                                    .roundabout({
-                                        shape: 'lazySusan',
-                    					easing: 'swing',
-                                        minOpacity: 1, // 1 fully visible, 0 invisible
-                                        minScale: 0.5, // tiny!
-                    					duration: 400,
-                                        btnNext: '#roundaboutnext',
-                                        btnPrev: '#roundaboutprevious',
-                                        clickToFocus: true
-                    				});
-                    			});
-                                function startAutoPlay() {
-                    				return setInterval(function() {
-                    					$('#roundabout').roundabout_animateToNextChild();
-                    				}, 3000);
-                    			}
-                         //]]>
-                    	 </script>
-                     </div>
-
-                 </div>
-
-</div>
-<!-- end header alternate-->
-
-<!-- start main content -->
-<div class="main-content pt-alt">
-    <div class="containit">
-
-        <!-- start display roundabout description and links -->
-        <div class="boxed-harder clearfix roundaboutdescription roundabout-desclinkbox">
-            <div class="fl roundabout-arrows">
-
-                <img src="_include/images/arrow-next-smaller.png" alt="" />
-            </div>
-            <div class="fl roundabout-desc"><h1 id="roundaboutdescription"></h1></div>
-            <div class="fr roundabout-link clearfix"><div id="roundaboutlinkone" class="fl"></div><div id="roundaboutlinktwo" class="fl"></div></div>
+<div id="tooplate_footer_wrapper">
+	<div id="tooplate_footer">
+    	<a href="#tooplate_header" class="goto_top"></a>
+    	<div class="col_3">
+        	<h5>Popular Posts</h5>
+            <div class="rp_pp">
+            	<div class="image_frame image_fl"><a href="#"><img src="images/tooplate_image_03.png" alt="image" /></a></div>
+                <div class="date">October 24, 2048</div>
+                <a href="#">Aliquam erat volutpat. Morbi porttitor, magna quis mattis porta.</a>
+                <div class="cleaner"></div>
+            </div> 
+            <div class="rp_pp">
+            	<div class="image_frame image_fl"><a href="#"><img src="images/tooplate_image_04.png" alt="image" /></a></div>
+                <div class="date">October 20, 2048</div>
+            <a href="#">Fusce suscipit est id magna egestas mattis quis in est aliquam.</a></div>
+    	</div>
+        <div class="col_3">
+        	<h5>Twitter</h5>
+            <ul class="twitter_post">
+	            <li>Suspendisse at scelerisque urna. Aenean tincidunt massa in. <a href="#">http://bit.lyrtrtr</a></li>
+                <li>Proin dignissim, diam scelerisque enim lorem tempus orci, ac. <a href="#">http://bit.ly/wew22</a></li>
+                <li>Quisque tempor ultrices lectus sit amet vehicula. In hendrerit. <a href="#">http://bit.ly/1weweZO</a></li>
+                <li>Fusce cursus consectetur ultricies sociis uis nisl lectus, mattis. <a href="#">http://bit.ly/13IwZO</a></li>
+			</ul>
+            
         </div>
-        <!-- end display roundabout description and links -->
-
-        <div class="full-width clearfix">
-            <div class="one-third pt10 border-vert-right-alt">
-
-                <div class="padright">
-                <div class="icon-to-left"><img src="_include/images/icons/icon-monitor.png"  width="60" height="60"  alt="" /></div>
-                <h2>Urna eu frin enatist incidunt nulla</h2>
-                <div class="clear"></div>
-                <p class="height-limit1">Curabitur placerat,  orci na eu fringilla orci mi placerat, urna eu <b>orci mi stincidunt</b> nulla incidunt orci mi placerat, urna eu <a href="#">frin enatist</a> incidunt nulla, vitae iaculis augue</p>
-
-                <div class="fl clearfix"><a class="btn-small" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Get This Template</span></a></div>
-                </div>
-            </div>
-            <div class="one-third pt10 border-vert-right-alt">
-                <div class="padright">
-                <div class="icon-to-left"><img src="_include/images/icons/icon-zoom.png" width="60" height="60"  alt="" /></div>
-                <h2>Urna eu frin enatist incidunt nulla</h2>
-                <div class="clear"></div>
-
-                <p class="height-limit1">Curabitur placerat,  <b>orci mi ingilla</b> orci mi placerat, urna eu orci mi stincidunt nulla incidunt orci mi placerat, urna eu frin enatist incidunt nulla, vitae <a href="#">iaculis augue</a></p>
-                <div class="fl clearfix"><a class="btn-small" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Get This Template</span></a></div>
-                </div>
-            </div>
-            <div class="one-third-last pt10">
-                <div class="padright">
-
-                <div class="icon-to-left"><img src="_include/images/icons/icon-tool.png" width="60" height="60"  alt="" /></div>
-                <h2>Urna eu frin enatist incidunt nulla</h2>
-                <div class="clear"></div>
-                <p class="height-limit1">Curabitur placerat,  orci eu fringilla orci mi placerat, urna eu orci mi stincidunt nulla <a href="#">incidunt orci</a> mi placerat, urna <b>eu frin enatist</b> incidunt nulla, vitae iaculis augue</p>
-                <div class="fl clearfix"><a class="btn-small" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Get This Template</span></a></div>
-
-                </div>
-            </div>
+        <div class="col_3 no_margin_right">
+			<h5>About Us</h5>
+            <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eros odio, rutrum quis volutpat nec, venenatis congue nulla. Praesent quis mauris purus, at pellentesque ante.</em></p>
+            <p>Donec convallis tortor eu nunc viverra nec euismod nunc consequat. Nunc in.</p>
+            <p>Copyright © 2048 <a href="#">Company Name</a><br />
+            Designed by <a href="http://www.tooplate.com">Website Templates</a></p>
+			<div class="cleaner h10"></div>
+              <a href="#"><img alt="facebook" src="images/facebook.png" title="facebook" /></a>
+              <a href="#"><img alt="flickr" src="images/flickr.png" title="flickr" /></a>
+              <a href="#"><img alt="twitter" src="images/twitter.png" title="twitter" /></a>
+              <a href="#"><img alt="youtube" src="images/youtube.png" title="youtube" /></a>
+              <a href="#"><img alt="rss" src="images/feed.png" title="rss" /></a>     		
         </div>
-
-        <div class="wide-horz-divider"><!--  --></div>
-
-        <div class="full-width clearfix pt0">
-               <div class="one-fourth pt20">
-                 <h3>Lorem Misum</h3>
-
-                 <div class="image"><img src="_include/images/thumb206x115-1.jpg" width="210" height="115" alt="" /></div>
-                 <div class="text height-limit3">Curabitur placerat,  orci mi stincidunt nullaurna <a href="#">eu fringilla venenatis</a>, orci mi placerat, urna eu fringilla venenatist orci mi stincidunt nulla incidunt orci mi placerat, urna eu frin enatist incidunt nulla, vitae iaculis augue</div>
-                 <div class="text-button"><a href="#">Learn More</a> <img src="_include/images/arrow.jpg" width="6" height="7" alt="" class="vm"/></div>
-              </div>
-              <div class="one-fourth pt20">
-                 <h3>Dorem Milus Mer</h3>
-
-                 <div class="image"><img src="_include/images/thumb206x115-2.jpg" width="210" height="115" alt="" /></div>
-                 <div class="text height-limit3">Curabitur placerat,  orci mi stincidunt nullaurna eu fringilla venenatis, orci mi placerat, urna eu fringilla venenatist orci <a href="#">mi stincidunt</a> nulla incidunt orci mi placerat, urna eu frin enatist incidunt nulla, vitae iaculis augue</div>
-                 <div class="text-button"><a href="#">Learn More</a> <img src="_include/images/arrow.jpg" width="6" height="7" alt="" class="vm"/></div>
-              </div>
-              <div class="one-fourth pt20">
-                 <h3>Mis Lorem Misum</h3>
-
-                 <div class="image"><img src="_include/images/thumb206x115-3.jpg" width="210" height="115" alt="" /></div>
-                 <div class="text height-limit3">Curabitur placerat,  orci mi stincidunt nullaurna eu fringilla venenatis, orci mi placerat, urna eu fringilla venenatist orci mi stincidunt nulla incidunt orci mi placerat, urna <a href="#">eu frin enatist</a> incidunt nulla, vitae iaculis augue</div>
-                 <div class="text-button"><a href="#">Learn More</a> <img src="_include/images/arrow.jpg" width="6" height="7" alt="" class="vm"/></div>
-              </div>
-              <div class="one-fourth-last border-vert-left pt20">
-                  <div class="pad">
-
-                  <h3>Orci mi stincidunt</h3>
-                  <ul class="pack-list">
-                      <li><a href="#">Urna eu frin</a></li>
-                      <li><a href="#">Witae iaculis augue</a></li>
-                      <li><a href="#">Erci mi placerat</a></li>
-                      <li><a href="#">Stincidunt nullaurna</a></li>
-
-                      <li><a href="#">Erna eu fringilla</a></li>
-                      <li><a href="#">Wulla incidunt</a></li>
-                      <li><a href="#">Frin enatist</a></li>
-                      <li><a href="#">Medi-Spas</a></li>
-                      <li><a href="#">Rrci mi placerat</a></li>
-                      <li class="last"><a href="#">Enatist incidunt nulla</a></li>
-
-                  </ul>
-                  </div>
-              </div>
-        </div>
-
-        <div class="wide-horz-divider"><!--  --></div>
-
-        <div class="full-width">
-              <div class="two-third"><h2 class="mb0">Orci eu fringilla orci mi placerat, urna eu orci mi stincidunt nulla incidunt orci mi placerat.</h2></div>
-
-              <div class="one-third-last"><a class="btn-medium" href="#"><span><img src="_include/images/icons/icon-pdf.png" width="24" height="24" alt="" class="vm" />Download PDF Presentation</span></a></div>
-              <div class="clear"></div>
-        </div>
-
-    </div>
-</div>
-<!-- end main content -->
-
-<!-- start big footer -->
-<div class="big-footer">
-<div class="top-shadow-footer"><!--  --></div>
-    <div class="containit">
-
-        <div class="full-width clearfix">
-                <div class="one-fourth panel">
-                    <div class="nopad">
-                    <h4>Lorem Ipsum</h4>
-                    <ul>
-                        <li><a href="#">Nulla vel lorem</a></li>
-                        <li><a href="#">Porttitor orci vulputate</a></li>
-
-                        <li><a href="#">Placerat mollis</a></li>
-                        <li><a href="#">Suscipit risus felis</a></li>
-                        <li class="last"><a href="#">Nullam ligula felis</a></li>
-                    </ul>
-                    </div>
-                </div>
-                <div class="one-fourth panel border-vert-left">
-
-                    <div class="padleft">
-                    <h4>Lorem Ipsum</h4>
-                    <ul>
-                        <li><a href="#">Nulla vel lorem</a></li>
-                        <li><a href="#">Porttitor orci vulputate</a></li>
-                        <li><a href="#">Placerat mollis</a></li>
-                        <li><a href="#">Suscipit risus felis</a></li>
-
-                        <li class="last"><a href="#">Nullam ligula felis</a></li>
-                    </ul>
-                    </div>
-                </div>
-                <div class="one-fourth panel border-vert-left">
-                    <div class="padleft">
-                    <h4>Contact</h4>
-                    <p>Curabitur placerat, urna eu fringilla placerat, urna eu venenatis</p>
-
-                    <b class="big">T: 800-232-2321</b><br/>
-                    <b class="big">F: 800-231-2313</b><br/>
-                    <a href="#">lorem@misum.com</a><br/>
-                    </div>
-                </div>
-                <div class="one-fourth-last panel border-vert-left newsletter">
-                    <div class="padleft">
-
-                    <h4>Join Our<br/> Newsletter</h4>
-                    <p>Curabitur placerat, urna eu fringilla venenatis, orci mi tincidunt nulla, vitae iaculis augue.</p>
-                    <table cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td><input name="" class="field"/></td>
-                        <td><input type="image" name="go" src="_include/images/newsletter-input-button.png" alt="Go" class="form-imagebutton" /></td>
-                      </tr>
-
-                    </table>
-                    <span class="small">Lorem ipsum <a href="#">dorem mors</a>.</span>
-                    </div>
-                </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- end big footer -->
-
-<!-- start small footer -->
-<div class="small-footer">
-    <div class="containit">
-
-       <div class="copy">Copyright &copy; 2010 <a href="http://www.spinform.ro">Bogdan Rosu</a>. All rights reserved.  Template on sale at: <a href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn">Themeforest</a>.</div>
-       <div class="social">
-
-           <ul>
-                <li><a href="#"><img src="_include/images/icons/icon-twitter.png" width="26" height="27" alt="" class="vm"/>Twitter</a></li>
-                <li><a href="#"><img src="_include/images/icons/icon-facebook.png" width="26" height="25" alt=""  class="vm"/>Facebook</a></li>
-                <li><a href="#"><img src="_include/images/icons/icon-linkedin.png" width="26" height="26" alt=""  class="vm"/>LinkedIn</a></li>
-                <li><a href="#"><img src="_include/images/icons/icon-rss.png" width="26" height="25" alt=""  class="vm"/>Blog RSS</a></li>
-           </ul>
-       </div>
-
-       <div class="clear"></div>
-    </div>
-</div>
-<!-- end start small footer -->
-<script type="text/javascript"> Cufon.now(); </script>
+        <div class="cleaner"></div>
+    </div> <!-- end of footer -->
+</div> <!-- end of footer wrapper -->
 
 </body>
 </html>
