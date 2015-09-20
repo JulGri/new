@@ -71,25 +71,25 @@
     <div id="tooplate_top">
         <div id="tooplate_menu" class="ddsmoothmenu">
             <ul>
-                <li><a href="index.html" class="selected"><span></span>Home</a></li>
-                <li><a href="about.html"><span></span>About Us</a>
+                <li><a href="index.html" class="selected"><span></span>Главная</a></li>
+                <li><a href="about.html"><span></span>О фирме</a>
                     <ul>
-                        <li><a href="#">Sub menu 1</a></li>
-                        <li><a href="#">Sub menu 2</a></li>
-                        <li><a href="#">Sub menu 3</a></li>
+                        <li><a href="#">История фирмы</a></li>
+                        <li><a href="#">Отзывы</a></li>
                     </ul>
                 </li>
-                <li><a href="portfolio.html"><span></span>Portfolio</a>
+                <li><a href="portfolio.html"><span></span>Сотруднику</a>
                     <ul>
-                        <li><a href="#">Sub menu 1</a></li>
-                        <li><a href="#">Sub menu 2</a></li>
-                        <li><a href="#">Sub menu 3</a></li>
-                        <li><a href="#">Sub menu 4</a></li>
-                        <li><a href="#">Sub menu 5</a></li>
+                        <li><a href="#">Данные клиентов</a></li>
+                        <li><a href="#">Услуги</a></li>
                     </ul>
                 </li>
-                <li><a href="blog.html"><span></span>Blog</a></li>
-                <li><a href="contact.html"><span></span>Contact</a></li>
+                <li><a href="contact.html"><span></span>Контакты</a>
+                <ul>
+                    <li><a href="#">Контактные данные</a></li>
+                    <li><a href="#">Схема проезда</a></li>
+                </ul>
+                </li>
             </ul>
             <br style="clear: left" />
         </div> <!-- end of menu -->
@@ -121,15 +121,62 @@
 
                 <?if(!CSite::InDir('/')):?></a><?endif;?>
         </div>
-        <div id="slider_wrapper">
-            <ul class="slider horizontal" >
-                <li id="slide_1"><img src="<?=SITE_TEMPLATE_PATH;?>/_include/images/slider/01.jpg" alt="Slider 1" /></li>
-                <li id="slide_2"><img src="<?=SITE_TEMPLATE_PATH;?>/_include/images/slider/02.jpg" alt="Slider 2" /></li>
-                <li id="slide_3"><img src="<?=SITE_TEMPLATE_PATH;?>/_include/images/slider/03.jpg" alt="Slider 3" /></li>
-                <li id="slide_4"><img src="<?=SITE_TEMPLATE_PATH;?>/_include/images/slider/04.jpg" alt="Slider 4" /></li>
-                <li id="slide_5"><img src="<?=SITE_TEMPLATE_PATH;?>/_include/images/slider/05.jpg" alt="Slider 5" /></li>
-            </ul>
-        </div>
+            <?$APPLICATION->IncludeComponent("bitrix:photo.section", "slider", Array(
+	"COMPONENT_TEMPLATE" => ".default",
+		"IBLOCK_TYPE" => "photos",	// Тип инфоблока
+		"IBLOCK_ID" => "32",	// Инфоблок
+		"SECTION_ID" => $_REQUEST["SECTION_ID"],	// ID раздела
+		"SECTION_CODE" => "",	// Код раздела
+		"SECTION_USER_FIELDS" => array(	// Свойства раздела
+			0 => "",
+			1 => "",
+		),
+		"ELEMENT_SORT_FIELD" => "sort",	// По какому полю сортируем фотографии
+		"ELEMENT_SORT_ORDER" => "asc",	// Порядок сортировки фотографий в разделе
+		"FILTER_NAME" => "arrFilter",	// Имя массива со значениями фильтра для фильтрации элементов
+		"FIELD_CODE" => array(	// Поля
+			0 => "",
+			1 => "ID",
+			2 => "Название",
+			3 => "Сортировка",
+			4 => "Картинка для анонса",
+		),
+		"PROPERTY_CODE" => array(	// Свойства
+			0 => "",
+			1 => "[URL] Ссылка",
+		),
+		"PAGE_ELEMENT_COUNT" => "20",	// Количество элементов на странице
+		"LINE_ELEMENT_COUNT" => "5",	// Количество фотографий, выводимых в одной строке таблицы
+		"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+		"DETAIL_URL" => "",	// URL, ведущий на страницу с содержимым элемента раздела
+		"AJAX_MODE" => "N",	// Включить режим AJAX
+		"AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
+		"AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
+		"AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
+		"AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+		"CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+		"META_KEYWORDS" => "-",	// Установить ключевые слова страницы из свойства
+		"META_DESCRIPTION" => "-",	// Установить описание страницы из свойства
+		"BROWSER_TITLE" => "-",	// Установить заголовок окна браузера из свойства
+		"SET_TITLE" => "N",	// Устанавливать заголовок страницы
+		"SET_STATUS_404" => "N",	// Устанавливать статус 404, если не найдены элемент или раздел
+		"SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
+		"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+		"PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
+		"DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
+		"DISPLAY_BOTTOM_PAGER" => "N",	// Выводить под списком
+		"PAGER_TITLE" => "Фотографии",	// Название категорий
+		"PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
+		"PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
+		"PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
+	),
+	false
+);?>
+        
     </div> <!-- end of header -->
 </div> <!-- end of header wrapper -->
 
