@@ -3,32 +3,18 @@ IncludeModuleLangFile($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/intranet/public
 
 $aMenuLinks = Array(
     Array(
-		GetMessage("DOCS_MENU_ALL_DOCS"),
+		"Данные клиентов",
 		"/docs/index.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		GetMessage("DOCS_MENU_SHARED"),
+		"Услуги",
 		"/docs/shared/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
-	Array(
-		GetMessage("DOCS_MENU_SALE"),
-		"/docs/sale/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		GetMessage("DOCS_MENU_MANAGE"),
-		"/docs/manage/", 
-		Array(), 
-		Array(), 
-		"" 
-	)
 );
 ?>

@@ -9,6 +9,7 @@
 
 <?if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 ?>
+<?IncludeTemplateLangFile(__FILE__);?>
 
 </div> <!-- end of main wrapper -->
 
@@ -41,7 +42,7 @@
         <div class="col_3 no_margin_right">
             <h5>О нас</h5>
             <p><em>Мы разработали собственную систему поддержки и настраивали её в течение двух лет. В данной отрасли мы единственные, кто предоставляет поддержку моментально в течение 24 часов.</em></p>
-            <p>   <?$APPLICATION->IncludeComponent(
+            <p>   <?=GetMessage('PHONE');?>:<?$APPLICATION->IncludeComponent(
                     "bitrix:main.include",
                     "",
                     Array(
@@ -124,7 +125,7 @@
 	),
 	false
 );?><br>
-           
+
         </div>
         <div class="cleaner"></div>
     </div> <!-- end of footer -->

@@ -69,30 +69,24 @@
 <?$APPLICATION->ShowPanel();?>
 <div id="tooplate_top_wrapper">
     <div id="tooplate_top">
-        <div id="tooplate_menu" class="ddsmoothmenu">
-            <ul>
-                <li><a href="index.html" class="selected"><span></span>Главная</a></li>
-                <li><a href="about.html"><span></span>О фирме</a>
-                    <ul>
-                        <li><a href="#">История фирмы</a></li>
-                        <li><a href="#">Отзывы</a></li>
-                    </ul>
-                </li>
-                <li><a href="portfolio.html"><span></span>Сотруднику</a>
-                    <ul>
-                        <li><a href="#">Данные клиентов</a></li>
-                        <li><a href="#">Услуги</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html"><span></span>Контакты</a>
-                <ul>
-                    <li><a href="#">Контактные данные</a></li>
-                    <li><a href="#">Схема проезда</a></li>
-                </ul>
-                </li>
-            </ul>
-            <br style="clear: left" />
-        </div> <!-- end of menu -->
+        <?$APPLICATION->IncludeComponent("bitrix:menu", "menu2", Array(
+	"COMPONENT_TEMPLATE" => ".default",
+		"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
+		"MENU_CACHE_TYPE" => "A",	// Тип кеширования
+		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+		"MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
+			0 => "",
+		),
+		"MAX_LEVEL" => "2",	// Уровень вложенности меню
+		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+		"USE_EXT" => "Y",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+		"DELAY" => "N",	// Откладывать выполнение шаблона меню
+		"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+	),
+	false
+);?>
+
         <div id="tooplate_search">
             <form action="#" method="get">
                 <input type="text" value="Search" name="keyword" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
@@ -176,7 +170,7 @@
 	),
 	false
 );?>
-        
+
     </div> <!-- end of header -->
 </div> <!-- end of header wrapper -->
 
