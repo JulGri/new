@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #core bitrix
+=======
+trix
+>>>>>>> fc53c6e237ff0bf41d5aaf6b174cda313da8df2b
 bitrix/[^/]*\.php$
 bitrix/activities/bitrix/
 #bitrix/admin
