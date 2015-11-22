@@ -15,5 +15,5 @@ $aMenuLinks = Array(
 		Array(), 
 		"CBXFeatures::IsFeatureEnabled('CompanyCalendar')" 
 	),
-	);
+);
 ?>
