@@ -1,14 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Julia
- * Date: 06.11.2015
- * Time: 21:57
- */
-?>
-
-<?if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
-?>
+<?if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();?>
 <?IncludeTemplateLangFile(__FILE__);?>
 
 </div> <!-- end of main wrapper -->
@@ -64,7 +54,8 @@
                     ));?>.</p>
             <p>Copyright <?=date('Y');?> EnergyPro++<br /></p>
             <div class="cleaner h10"></div>
-            <?$APPLICATION->IncludeComponent("bitrix:news.list", "social", Array(
+            <?
+			$APPLICATION->IncludeComponent("bitrix:news.list", "social", Array(
 	"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_TYPE" => "photos",	// Тип информационного блока (используется только для проверки)
 		"IBLOCK_ID" => "33",	// Код информационного блока
@@ -127,7 +118,7 @@
 );?><br>
 
         </div>
-        <div class="cleaner"></div>
+		<div class="cleaner"></div>
     </div> <!-- end of footer -->
 </div> <!-- end of footer wrapper -->
 

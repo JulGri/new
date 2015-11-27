@@ -94,7 +94,8 @@ $APPLICATION->IncludeComponent(
 );
 ?>
 
-<?$APPLICATION->IncludeComponent(
+<?
+$APPLICATION->IncludeComponent(
 	"bitrix:intranet.bitrix24.banner",
 	"",
 	array(),
@@ -109,7 +110,7 @@ endif;?>
 
 <?
 if(CModule::IncludeModule('calendar')):
-	$APPLICATION->IncludeComponent("bitrix:calendar.events.list", "widget", array(
+		$APPLICATION->IncludeComponent("bitrix:calendar.events.list", "widget", array(
 		"CALENDAR_TYPE" => "user",
 		"B_CUR_USER_LIST" => "Y",
 		"INIT_DATE" => "",
@@ -126,7 +127,7 @@ endif;?>
 
 <?
 if(CModule::IncludeModule('tasks')):
-	$APPLICATION->IncludeComponent(
+		$APPLICATION->IncludeComponent(
 		"bitrix:tasks.filter.v2",
 		"widget",
 		array(
@@ -250,4 +251,5 @@ endif;?>
 	);
 endif;?>
 
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
