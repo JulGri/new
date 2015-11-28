@@ -54,8 +54,7 @@
                     ));?>.</p>
             <p>Copyright <?=date('Y');?> EnergyPro++<br /></p>
             <div class="cleaner h10"></div>
-            <?
-			$APPLICATION->IncludeComponent("bitrix:news.list", "social", Array(
+            <?$APPLICATION->IncludeComponent("bitrix:news.list", "social", Array(
 	"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_TYPE" => "photos",	// Тип информационного блока (используется только для проверки)
 		"IBLOCK_ID" => "33",	// Код информационного блока
@@ -118,7 +117,7 @@
 );?><br>
 
         </div>
-		<div class="cleaner"></div>
+        <div class="cleaner"></div>
     </div> <!-- end of footer -->
 </div> <!-- end of footer wrapper -->
 
