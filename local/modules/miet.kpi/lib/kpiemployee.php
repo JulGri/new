@@ -11,7 +11,7 @@ class KPIEmployeeTable extends Entity\DataManager {
     /*Название таблицы HL в БД*/
     public static function getTableName()
     {
-        return 't_employee_kp';
+        return 't_employee_kpi';
     }
     /*Описание полей сущности (соответсвуют полям HL EmployeeKPI)*/
     public static function getMap()
