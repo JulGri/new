@@ -8,9 +8,7 @@ use Bitrix\Iblock\ElementTable;
 use Bitrix\Main\UserTable;
 Loc::loadMessages(__FILE__);
 class ReadingsManager {
-    const IBLOCK_CODE_KPI = 'kpi';
-    const IBLOCK_CODE_DEPARTMENTS = 'departments';
-    public static function GetKPI(
+        public static function SaveReadings($arData)[
         $arOrder = array('SORT' => 'ASC'),
         $arFilter = array(),
         $arGroupBy = false,
