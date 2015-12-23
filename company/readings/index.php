@@ -1,7 +1,7 @@
 <? require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
 <br>
-<?$APPLICATION->IncludeComponent(
-    "miet:kpi.employee.view",
+<? $APPLICATION->IncludeComponent(
+    "miet:readings.meterreadings.detail",
     "",
     Array(
         "COMPONENT_TEMPLATE" => ".default",

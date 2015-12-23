@@ -40,7 +40,7 @@ class MeterReadingsTable extends Entity\DataManager {
             ),
             'UF_SHOW_DATE' => array(
             'data_type' => 'date',
-            'required' => true,
+            'required' => false,
             'title' => Loc::getMessage('SHOW_DATE_FIELD')
              ),
             'UF_ID_SERVICE' => array(
@@ -52,12 +52,12 @@ class MeterReadingsTable extends Entity\DataManager {
  //Описываем все связи с другими таблицами (внешние ключи)
  new Entity\ReferenceField(
      'UF_ID_CLIENT',
-     'MIET\READINGS\CLIENTS',
+     'MIET\READINGS\ClientTable',
      array('=this.UF_ID_CLIENT' => 'ref.ID')
  ),
  new Entity\ReferenceField(
      'UF_ID_SERVICE',
-     'MIET\READINGS\SERVICES',
+     'MIET\READINGS\ServicesTable',
      array('=this.UF_ID_SERVICE' => 'ref.ID')
  )
 

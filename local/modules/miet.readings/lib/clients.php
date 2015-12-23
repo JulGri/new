@@ -71,7 +71,7 @@ class ClientTable extends Entity\DataManager {
             ),
             'UF_BIRTH_DATE' => array(
                 'data_type' => 'date',
-                'required' => true,
+                'required' => false,
                 'title' => Loc::getMessage('BIRTH_DATE_FIELD')
             ),
 

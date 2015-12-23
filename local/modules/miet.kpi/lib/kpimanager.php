@@ -106,13 +106,13 @@ class KPIManager {
         if (!$idKPI || !$idEmployee || !$period) {
             return array();
         }
-        return current(KPIEmployeeTablee::getList(array(
+        return current(KPIEmployeeTable::getList(array(
             'select' => array(
                 'ID', 'UF_VALUE'
 
             ),
             'filter' => array(
-                'UF_PERIOD' => \Bitrix\Main\Type\Date\Time::createFromUserTime($period),
+                'UF_PERIOD' => \Bitrix\Main\Type\DateTime::createFromUserTime($period),
                 'UF_EMPLOYEE' => $idEmployee,
                 'UF_KPI' => $idKPI
             )

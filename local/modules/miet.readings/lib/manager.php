@@ -7,96 +7,45 @@ use Bitrix\Main\Localization\Loc;
 use Bitrix\Iblock\ElementTable;
 use Bitrix\Main\UserTable;
 Loc::loadMessages(__FILE__);
-class ReadingsManager {
-        public static function SaveReadings($arData)[
-        $arOrder = array('SORT' => 'ASC'),
-        $arFilter = array(),
-        $arGroupBy = false,
-        $arNavStartParams = false,
-        $arSelectFields = array('ID', 'NAME')
-    ) {
-        $elements = array();
-        //Получаем ID инфоблока KPI по его символьному коду
-        $rsIblock = \CIBlock::GetList(
-            array(),
-            array('CODE' => self::IBLOCK_CODE_KPI, 'SITE_ID' =>
-                SITE_ID)
-        );
-        $arIblock = $rsIblock->GetNext();
-        $arFilter['IBLOCK_ID'] = $arIblock['ID'];
-        $rsElements = \CIBlockElement::GetList(
-            $arOrder, //массив полей сортировки элементов и её направления
- $arFilter, //массив полей фильтра элементов и их значений
- $arGroupBy, //массив полей для группировки элементов
- $arNavStartParams, //параметры для постраничной навигациии ограничения количества выводимых элементов
- $arSelectFields //массив возвращаемых полей элементов
- );
- while($arElements = $rsElements->Fetch()) {
-     //Получение информации о файле с регламентом расчета показателя: ссылка на файл на сервере, название файла и т.д.
- foreach($arElements['PROPERTY_REGULATIONS_VALUE'] as $key
-=> $idFileRegulation) {
-         $arElements['PROPERTY_REGULATIONS_VALUE'][$key] =
-             \CFile::GetFileArray($idFileRegulation);
-     }
- $elements[] = $arElements;
-     }
- return $elements;
- }
-    public static function GetKPIEmployee($idEmployee) {
-        if(!$idEmployee) {
-            return array();
-        }
-        //Получаем список всех подразделений сотрудника
-        $arDepartmentsUser = UserTable::getList(array(
-            'select' => array(
-                'UF_DEPARTMENT'
-            ),
-            'filter' => array(
-                'ID' => $idEmployee
-            )
-        ))->fetch();
-        //Получаем список всех KPI данных подразделений
-        return self::GetKPI(
-            array('NAME' => 'asc'),
-            array('PROPERTY_DEPARTMENT.ID' => $arDepartmentsUser),
-            false,
-            false,
-            array('ID', 'NAME', 'PROPERTY_INDICATOR_TYPE',
-                'PROPERTY_WEIGHT', 'PROPERTY_REGULATIONS')
-        );
-    }
-    public static function SetKPIEmployee($idEmployee, $period,
-                                          $arKPIValues) {
-        if(!$idEmployee || !is_array($arKPIValues) ||
-            !count($arKPIValues)) {
-            return array();
-        }
-        global $USER;
-        //Получаем объект подключения к БД
-        $db = Application::getConnection();
-        //Начинаем транзакцию
-        $db->startTransaction();
 
-        foreach($arKPIValues as $KPI => $KPIValue) {
-            $arValue = array(
-                'UF_VALUE' => $KPIValue,
-                'UF_KPI' => $KPI,
-                'UF_EMPLOYEE' => $idEmployee,
-                'UF_CREATED_BY' => $USER->GetID(),
-                'UF_CREATED' => new
-                \Bitrix\Main\Type\DateTime(date('d.m.Y') . ' 00:00:00'),
-                'UF_PERIOD' => new
-                \Bitrix\Main\Type\DateTime($period. ' 00:00:00')
-            );
-            $result = KPIEmployeeTable::add($arValue);
-            if (!$result->isSuccess()) {
-                $db->rollbackTransaction();
-                return false;
-            }
+Class ReadingsManager
+{
+    public static function SaveReadings($arData)
+    {
+        $db = Application::getConnection();
+        $db->startTransaction();
+        /* таблица Клиент, все поля*/
+        $date = explode("-", $arData['Birth']);
+        $result = ClientTable::add(array(
+            'UF_FAM' => $arData['Surname'],
+            'UF_IMYA' => $arData['Name'],
+            'UF_OTCH' => $arData['Patronymic'],
+            'UF_FLAT' => $arData['Flat'],
+            'UF_HOUSE_BUILDING' => $arData['House'],
+            'UF_REGION' => $arData['Region'],
+            'UF_STREET_DISTRICT' => $arData['Street'],
+            'UF_CITY' => $arData['City'],
+            'UF_INDEX' => $arData['Index'],
+            'UF_BIRTH_DATE' => new \Bitrix\Main\Type\Date($date[2].'.'.$date[1].'.'.$date[0])
+        ));
+        if (!$result->isSuccess()) {
+            $db->rollbackTransaction();
+            return false;
         }
-        if ($result->isSuccess()) {
-            $db->commitTransaction();
-            return true;
+        $idClient = $result->getId();
+        $date = explode("-", $arData['Show_date']);
+        /* таблица Показания счетчика,только поля дата и показания*/
+        $result = MeterReadingsTable::add(array(
+            'UF_ID_CLIENT' => $idClient,
+            'UF_ID_SERVICE' => $arData['UF_SERVICE_NAME'],
+            'UF_SHOW_DATE' => new \Bitrix\Main\Type\Date($date[2].'.'.$date[1].'.'.$date[0]),
+            'UF_READINGS' => $arData['Meter_readings']
+        ));
+        if (!$result->isSuccess()) {
+            $db->rollbackTransaction();
+            return false;
         }
+        $db->commitTransaction();
+        return true;
     }
 }
